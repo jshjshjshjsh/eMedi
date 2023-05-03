@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48030736-DCE3-43FA-84C5-17EFAB35E81A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>reporting_tool</RootNamespace>
+    <AssemblyName>reporting_tool</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mark1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clinic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clinic.designer.cs">
+      <DependentUpon>Clinic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesignTool.Designer.cs">
+      <DependentUpon>DesignTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocSetting.designer.cs">
+      <DependentUpon>DocSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagePatient.designer.cs">
+      <DependentUpon>ManagePatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Printing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Printing.designer.cs">
+      <DependentUpon>Printing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preview.designer.cs">
+      <DependentUpon>Preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient.designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Clinic.resx">
+      <DependentUpon>Clinic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignTool.resx">
+      <DependentUpon>DesignTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocSetting.resx">
+      <DependentUpon>DocSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagePatient.resx">
+      <DependentUpon>ManagePatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Printing.resx">
+      <DependentUpon>Printing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preview.resx">
+      <DependentUpon>Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\미리보기1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\삭제1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\조회1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\출력1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mark1.ico" />
+    <Content Include="Resources\free-icon-font-apps-sort-3917657.png" />
+    <None Include="Resources\free-icon-font-zoom-in-39171711.png" />
+    <None Include="Resources\free-icon-font-settings-391703511.png" />
+    <None Include="Resources\free-icon-font-settings-39170352.png" />
+    <None Include="Resources\free-icon-font-print-39171191.png" />
+    <None Include="Resources\free-icon-font-plus-39171721.png" />
+    <None Include="Resources\free-icon-font-minus-391775511.png" />
+    <None Include="Resources\free-icon-font-minus-39177552.png" />
+    <None Include="Resources\free-icon-font-folder-39174181.png" />
+    <None Include="Resources\free-icon-font-document-39141931.png" />
+    <None Include="Resources\free-icon-font-arrow-right-39168461.png" />
+    <None Include="Resources\free-icon-font-apps-sort-39176571.png" />
+    <Content Include="Resources\free-icon-font-arrow-right-3916846.png" />
+    <Content Include="Resources\free-icon-font-document-3914193.png" />
+    <Content Include="Resources\free-icon-font-folder-3917418.png" />
+    <Content Include="Resources\free-icon-font-minus-3917755.png" />
+    <Content Include="Resources\free-icon-font-minus-39177551.png" />
+    <Content Include="Resources\free-icon-font-plus-3917172.png" />
+    <Content Include="Resources\free-icon-font-print-3917119.png" />
+    <Content Include="Resources\free-icon-font-settings-3917035.png" />
+    <Content Include="Resources\free-icon-font-settings-39170351.png" />
+    <Content Include="Resources\free-icon-font-zoom-in-3917171.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
